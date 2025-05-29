@@ -83,10 +83,7 @@
 
                         <div class="nav-outer clearfix">
                             <!-- Mobile Nav Toggler -->
-                            <div class="mobile-nav-toggler">
-                                <span class="icon flaticon-menu-2"></span>
-                                <span class="txt">Menu</span>
-                            </div>
+                            <a href="#" class="side-menu__toggler" style="font-size: 24px;">&#9776;</a>
 
                             <!-- Navigation Menu -->
                             <nav class="main-menu navbar-expand-md navbar-light">
@@ -137,7 +134,7 @@
             <div class="side-menu__block-inner">
                 <div class="side-menu__top justify-content-end">
                     <a href="#" class="side-menu__toggler side-menu__close-btn">
-                        <img src="{{ url_for('static', filename='imgs/close-1-1.png') }}" alt="Close">
+                        <img src="{{ url_for('static', filename='imgs/close.png') }}" alt="Close">
                     </a>
                 </div>
 
@@ -146,8 +143,8 @@
                         <li class="current"><a href="{{ url_for('home') }}">Home</a></li>
                         <li><a href="{{ url_for('about') }}">About</a></li>
                         <li class="dropdown">
-                            <a href="{{ url_for('treatments') }}">Treatments <div class="dropdown-btn"><span
-                                        class="fa fa-angle-right"></span></div></a>
+                            <a href="{{ url_for('treatments') }}">Treatments</a>
+                            <div class="dropdown-btn"><span class="fa fa-angle-right"></span></div>
                             <ul>
                                 <li><a href="{{ url_for('treatment_detail', name='vamana') }}">Vamana (Emesis
                                         Therapy)</a></li>
@@ -645,6 +642,44 @@
     });
 
 
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuToggler = document.querySelector(".side-menu__toggler");
+        const menuBlock = document.querySelector(".side-menu__block");
+        const closeBtn = document.querySelector(".side-menu__close-btn");
+
+        if (menuToggler) {
+            menuToggler.addEventListener("click", function (e) {
+                e.preventDefault();
+                menuBlock.classList.add("active");
+            });
+        }
+
+        if (closeBtn) {
+            closeBtn.addEventListener("click", function (e) {
+                e.preventDefault();
+                menuBlock.classList.remove("active");
+            });
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const dropdownButtons = document.querySelectorAll(".dropdown-btn");
+
+    dropdownButtons.forEach(function (btn) {
+        btn.addEventListener("click", function (e) {
+            const parentLi = this.closest("li");
+            const submenu = parentLi.querySelector("ul");
+
+            if (submenu) {
+                submenu.classList.toggle("open");
+                // Optional: toggle arrow direction
+                const icon = this.querySelector("span");
+                icon.classList.toggle("fa-angle-right");
+                icon.classList.toggle("fa-angle-down");
+            }
+        });
+    });
+});
     </script>
 
 </body>

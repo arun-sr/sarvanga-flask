@@ -26456,3 +26456,89 @@ img.lazy-image.loaded {
 .megamenu-popup-active .main-header .header-upper .logo-box {
   display: none;
 }
+
+/* mine */
+
+.side-menu__block {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 9999;
+  overflow-y: auto;
+  display: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.side-menu__block.active {
+  display: block;
+  opacity: 1;
+}
+
+.side-menu__block-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9980;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.side-menu__block-inner {
+  position: relative;
+  z-index: 9990;
+  padding: 30px 20px;
+}
+
+.side-menu__close-btn img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.side-menu__top {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mobile-nav__container ul.navigation {
+  padding: 0;
+  margin: 20px 0;
+  list-style: none;
+}
+
+.mobile-nav__container ul.navigation li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.mobile-nav__container ul.navigation li a {
+  color: #222;
+  font-size: 16px;
+  display: block;
+}
+
+.mobile-nav__container ul li ul {
+  display: none;
+}
+
+.mobile-nav__container ul li ul.open {
+  display: block;
+}
+@media (min-width: 768px) {
+  .side-menu__toggler {
+      display: none !important;
+  }
+}
+
+/* Optionally show only on smaller screens */
+@media (max-width: 767px) {
+  .side-menu__toggler {
+      display: inline-block;
+  }
+}
