@@ -47,7 +47,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-
     <style>
         .fa-check {
             color: #569700;
@@ -56,7 +55,6 @@
 
 </head>
 
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <body class="page-loaded">
     <div class="page-wrapper">
@@ -124,6 +122,7 @@
             </div> <!-- End Header Upper -->
         </header>
         <!-- End Main Header -->
+
         <!-- Mobile Menu -->
         <div class="side-menu__block">
             <div class="side-menu__block-overlay custom-cursor__overlay">
@@ -180,7 +179,6 @@
                 </nav>
 
                 <div class="side-menu__sep"></div>
-
                 <div class="side-menu__content">
                     <p>
                         <a href="tel:+919633767569">+91 9633 76 75 69</a><br>
@@ -198,15 +196,10 @@
         </div>
 
 
-
-
         <!-- HEAD: Place inside <head> tag -->
         <meta name="description"
             content="Sarvanga is one of the most popular Ayurveda Panchakarma treatment centers in Trivandrum, Kerala | Best ayurvedic hospitals in Trivandrum | Panchakarma center ">
         <title>Best Panchakarma Treatment Center in Trivandrum | Sarvanga</title>
-
-        <!-- SECTION: Banner -->
-
         
         <!-- Banner Section -->
 <section class="banner-section-four">
@@ -256,7 +249,6 @@
     </div>
 </section>
 
-
         <!-- SECTION: About -->
         <section class="about-section" id="about">
             <div class="auto-container">
@@ -299,8 +291,6 @@
                 </div>
             </div>
         </section>
-
-
 
         <section style="background-color: #eeffd6; padding-top: 100px; padding-bottom: 100px;">
             <div class="auto-container">
@@ -358,7 +348,6 @@
                 </div>
             </div>
         </section>
-
 
         <section style="background-color: #569700; padding-top: 100px; padding-bottom: 100px; display: none;">
             <div class="auto-container">
@@ -484,7 +473,6 @@
             </div>
         </section>
 
-
         <!-- Main Footer -->
         <footer class="main-footer">
             <div class="auto-container">
@@ -583,9 +571,7 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </footer>
@@ -595,95 +581,9 @@
     <a href="{{ url_for('home') }}" data-target="html" class="scroll-to-target scroll-to-top"
         style="display: inline;"><i class="fa fa-angle-up"></i></a>
 
-    <script>
-        var swiper = new Swiper(".newsSwiper", {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            autoplay: {
-                delay: 5000,
-            },
-            breakpoints: {
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                },
-            },
-        });
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
-
-        var testimonialsSwiper = new Swiper('.testimonialsSwiper', {
-            loop: true,
-            pagination: {
-                el: '.testimonialsSwiper .swiper-pagination',
-                clickable: true,
-            },
-            autoplay: {
-                delay: 5000,
-            },
-            slidesPerView: 1,
-            spaceBetween: 30,
-        });
-
-        
-        new Swiper(".banner-swiper", {
-        loop: true,
-        effect: "fade",
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false
-        },
-        navigation: {
-            nextEl: "#banner-section-four__swiper-button-next",
-            prevEl: "#banner-section-four__swiper-button-prev",
-        }
-    });
-
-
-    document.addEventListener("DOMContentLoaded", function () {
-        const menuToggler = document.querySelector(".side-menu__toggler");
-        const menuBlock = document.querySelector(".side-menu__block");
-        const closeBtn = document.querySelector(".side-menu__close-btn");
-
-        if (menuToggler) {
-            menuToggler.addEventListener("click", function (e) {
-                e.preventDefault();
-                menuBlock.classList.add("active");
-            });
-        }
-
-        if (closeBtn) {
-            closeBtn.addEventListener("click", function (e) {
-                e.preventDefault();
-                menuBlock.classList.remove("active");
-            });
-        }
-    });
-
-    document.addEventListener("DOMContentLoaded", function () {
-    const dropdownButtons = document.querySelectorAll(".dropdown-btn");
-
-    dropdownButtons.forEach(function (btn) {
-        btn.addEventListener("click", function (e) {
-            const parentLi = this.closest("li");
-            const submenu = parentLi.querySelector("ul");
-
-            if (submenu) {
-                submenu.classList.toggle("open");
-                // Optional: toggle arrow direction
-                const icon = this.querySelector("span");
-                icon.classList.toggle("fa-angle-right");
-                icon.classList.toggle("fa-angle-down");
-            }
-        });
-    });
-});
-    </script>
 
 </body>
-
 </html>

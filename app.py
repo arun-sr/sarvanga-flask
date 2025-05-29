@@ -16,26 +16,7 @@ def about():
 @app.route("/services")
 def services():
     return render_template("services.html")
-  
-@app.route("/panchakarma")
-def panchakarma_page():
-    treatments = [
-        {
-            "title": "Podikizhi",
-            "url": "https://www.Sarvanga.com/podikizhi.html",
-            "img_src": "imgs/podikizhi.jpg",  # Inside 'static/images/'
-            "description": "This unique therapy utilizes warm, medicated herbal poultices..."
-        },
-        {
-            "title": "Njavarakizhi",
-            "url": "https://www.Sarvanga.com/njavarakizhi.html",
-            "img_src": "imgs/njavarakizhi.jpg",
-            "description": "A nourishing therapy using a special rice variety boiled with herbs and milk..."
-        },
-        # Add more treatments here
-    ]
-    return render_template("panchakarma.html", treatments=treatments)
-    
+
 @app.route('/treatments/<name>')
 def treatment_detail(name):
     return render_template(f'treatments/{name}.html')
