@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Best Panchakarma Treatment Center in Trivandrum | Sarvanga</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <!-- Meta & SEO -->
+    <meta name="description" content="Sarvanga is one of the most trusted Ayurveda centers in Trivandrum. Detox, rejuvenate and heal holistically.">
+
+    <!-- Google Tag Manager -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-356BJBZ023"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-356BJBZ023');
+    </script>
+
+    <!-- Styles -->
+     
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome-all.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="icon" href="{{ url_for('static', filename='imgs/favicon.png') }}" type="image/x-icon">
+
+    <style>.fa-check { color: #569700; }</style>
+
+    {% block extra_head %}{% endblock %}
+</head>
+
+<body class="page-loaded">
+    <div class="page-wrapper">
+        {% include '_header.html' %}
+        {% block content %}{% endblock %}
+        {% include '_footer.html' %}
+    </div>
+
+    <a href="{{ url_for('home') }}" class="scroll-to-top"><i class="fa fa-angle-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>

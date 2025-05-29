@@ -1,0 +1,131 @@
+        <!-- Main Header -->
+        <header class="main-header header-style-one header-style-seven fixed-header">
+            <div class="header-upper">
+                <div class="inner-container clearfix">
+                    <div class="auto-container">
+                        <!-- Logo -->
+                        <div class="logo-box">
+                            <div class="logo">
+                                <a href="{{ url_for('home') }}" title="Sarvanga">
+                                    <img src="{{ url_for('static', filename='imgs/logo.png') }}" id="thm-logo"
+                                        alt="Sarvanga Logo">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="nav-outer clearfix">
+                            <!-- Mobile Nav Toggler -->
+                            <a href="#" class="side-menu__toggler" style="font-size: 24px;">&#9776;</a>
+
+                            <!-- Navigation Menu -->
+                            <nav class="main-menu navbar-expand-md navbar-light">
+                                <ul class="navigation clearfix">
+                                    <li class="current"><a href="{{ url_for('home') }}">Home</a></li>
+                                    <li><a href="{{ url_for('about') }}">About</a></li>
+                                    <li class="dropdown">
+                                        <a href="{{ url_for('treatments') }}">Treatments</a>
+                                        <ul>
+                                        <li><a href="{{ url_for('treatment_detail', name='vamana') }}">Vamana (EmesisTherapy)</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='virechan') }}">Virechan (PurgationTherapy)</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='nasyam') }}">Nasyam</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='vasti') }}">Vasti (Enema Therapy)</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='raktamoksha') }}">Raktamoksham</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='pashchat_karma') }}">Paschat karma</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='netratharpanam') }}">NetraTharpanam</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='navarakizhi') }}">Navarakizhi</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='pizhichil') }}">Pizhichil</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='januvasthi') }}">Januvasthi</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='kadivasthi') }}">Kadivasthi</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='elakizhi') }}">Elakizhi</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='podikizhi') }}">Podikizhi</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='sirodhara') }}">Sirodhara</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='thakradhara') }}">Thakradhara</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="{{ url_for('services') }}">Services</a></li>
+                                    <li><a href="{{ url_for('packages') }}">Packages</a></li>
+                                    <li><a href="{{ url_for('courses') }}">Courses</a></li>
+                                    <li><a href="{{ url_for('review') }}">Review</a></li>
+                                    <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div> <!-- /.auto-container -->
+                </div>
+            </div> <!-- End Header Upper -->
+        </header>
+        <!-- End Main Header -->
+
+        <!-- Mobile Menu -->
+        <div class="side-menu__block">
+            <div class="side-menu__block-overlay custom-cursor__overlay">
+                <div class="cursor"></div>
+                <div class="cursor-follower"></div>
+            </div>
+
+            <div class="side-menu__block-inner">
+                <div class="side-menu__top justify-content-end">
+                    <a href="#" class="side-menu__toggler side-menu__close-btn">
+                        <img src="{{ url_for('static', filename='imgs/close.png') }}" alt="Close">
+                    </a>
+                </div>
+
+                <nav class="mobile-nav__container">
+                    <ul class="navigation clearfix">
+                        <li class="current"><a href="{{ url_for('home') }}">Home</a></li>
+                        <li><a href="{{ url_for('about') }}">About</a></li>
+                        <li class="dropdown">
+                            <a href="{{ url_for('treatments') }}">Treatments</a>
+                            <div class="dropdown-btn"><span class="fa fa-angle-right"></span></div>
+                            <ul>
+                                <li><a href="{{ url_for('treatment_detail', name='vamana') }}">Vamana (Emesis
+                                        Therapy)</a></li>
+                                <li><a href="{{ url_for('treatment_detail', name='virechan') }}">Virechan (Purgation
+                                        Therapy)</a></li>
+                                <li><a href="{{ url_for('treatment_detail', name='nasyam') }}">Nasyam</a></li>
+                                <li><a href="{{ url_for('treatment_detail', name='vasti') }}">Vasti (Enema Therapy)</a>
+                                </li>
+                                <li><a href="{{ url_for('treatment_detail', name='raktamoksha') }}">Raktamoksham</a>
+                                </li>
+                                <li><a href="{{ url_for('treatment_detail', name='pashchat_karma') }}">Paschat karma</a>
+                                </li>
+                                <li><a href="{{ url_for('treatment_detail', name='netratharpanam') }}">Netra
+                                        Tharpanam</a></li>
+                                <li><a href="{{ url_for('treatment_detail', name='navarakizhi') }}">Navarakizhi</a></li>
+                                <li><a href="{{ url_for('treatment_detail', name='pizhichil') }}">Pizhichil</a></li>
+                                <li><a href="{{ url_for('treatment_detail', name='januvasthi') }}">Januvasthi</a></li>
+                                <li><a href="{{ url_for('treatment_detail', name='kadivasthi') }}">Kadivasthi</a></li>
+                                <li><a href="{{ url_for('treatment_detail', name='elakizhi') }}">Elakizhi</a></li>
+                                <li><a href="{{ url_for('treatment_detail', name='podikizhi') }}">Podikizhi</a></li>
+                                <li><a href="{{ url_for('treatment_detail', name='sirodhara') }}">Sirodhara</a></li>
+                                <li><a href="{{ url_for('treatment_detail', name='thakradhara') }}">Thakradhara</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{{ url_for('services') }}">Services</a></li>
+                        <li><a href="{{ url_for('packages') }}">Packages</a></li>
+                        <li><a href="{{ url_for('courses') }}">Courses</a></li>
+                        <li><a href="{{ url_for('blogs') }}">Blogs</a></li>
+                        <li><a href="{{ url_for('review') }}">Review</a></li>
+                        <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="side-menu__sep"></div>
+                <div class="side-menu__content">
+                    <p>
+                        <a href="tel:+919633767569">+91 9633 76 75 69</a><br>
+                        <a href="tel:+918943438494">+91 89 43 43 84 94</a><br>
+                        <a href="mailto:Sarvanga@gmail.com">Sarvanga@gmail.com</a><br>
+                        <a href="mailto:info@Sarvanga.com">info@Sarvanga.com</a>
+                    </p>
+                    <div class="side-menu__social">
+                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
