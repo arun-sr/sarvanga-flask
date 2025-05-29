@@ -311,20 +311,21 @@
                                 <div class="sec-title mb-2">
                                     <h2>Why you need Ayurveda Detoxification<span class="dot">.</span></h2>
                                 </div>
-                                <p>According to Ayurveda, health is a harmonious balance of mind, body, and spirit,
-                                    achieved through personalized lifestyle practices, natural remedies, and alignment
-                                    with one's unique constitution and the surrounding environment. As per
-                                    detoxification view, health is defined as the body being clear of toxins, the mind
-                                    is at peace, emotions are calm and happy, wastes are efficiently eliminated and
-                                    organs are functioning normally. In a busy, stressful and toxic world, our physical
-                                    and mental systems accumulate toxins causing deterioration in bodily functioning.
-                                    This eventually weakens our systems, which opens the door for chronic, degenerative,
-                                    and non-specific diseases to develop. These can evolve into serious specific
-                                    diseases, ultimately damaging an individual’s health and wellness. Panchakarma can
-                                    help by reversing these negative effects of daily living. It can restore your
-                                    natural state of health and wellness by cleansing your body of toxins, bringing
-                                    balance into your system and improving bodily function. It can also help you sustain
-                                    this process by making positive changes in lifestyle.</p>
+                                <p>Ayurveda views true health as a dynamic balance between the mind, body, and spirit, 
+                                    nurtured through tailored routines, natural therapies, and harmony with your 
+                                    individual constitution and nature. From the lens of detoxification, 
+                                    health means a toxin-free body, a calm and clear mind, balanced emotions, 
+                                    efficient waste elimination, and optimal organ performance. In today’s 
+                                    fast-paced, high-stress, and chemically-laden world, our bodies and minds 
+                                    gather impurities that quietly disrupt their natural rhythm. Over time, 
+                                    this toxin buildup weakens the body's resilience, paving the way for 
+                                    persistent fatigue, chronic issues, and eventual lifestyle-related diseases. 
+                                    These imbalances can silently progress into more severe conditions, compromising 
+                                    long-term vitality and well-being. Panchakarma, Ayurveda’s powerful detox system, 
+                                    helps reverse this internal chaos and restores your body’s natural intelligence and 
+                                    healing ability. It purifies deeply, balances your doshas, and strengthens 
+                                    immunity—bringing you back to a state of true wellness. Beyond cleansing, 
+                                    it empowers you to maintain this harmony through mindful living and sustainable daily habits.</p>
                                 <div class="btn-inflex">
                                     <div class="link-box" style="margin-right: 10px;">
                                         <a class="theme-btn btn-style-one"
@@ -417,11 +418,12 @@
                                     </div>
                                     <div class="service-nine__content">
                                         <h3 class="service-nine__title">
-                                            <a href="{{ treatment.url }}">{{ treatment.title }}</a>
+                                            <a href="{{ url_for('treatment_detail', name=treatment.url) }}">{{ treatment.title }}</a>
                                         </h3>
                                         <p class="service-nine__text">{{ treatment.description }}</p>
-                                        <a href="{{ treatment.url }}" class="service-nine__link"><i
+                                        <a href="{{ url_for('treatment_detail', name=treatment.url) }}" class="service-nine__link"><i
                                                 class="fa fa-angle-right"></i></a>
+                                                
                                     </div>
                                 </div>
                             </div>

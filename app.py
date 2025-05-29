@@ -35,15 +35,15 @@ def panchakarma_page():
         # Add more treatments here
     ]
     return render_template("panchakarma.html", treatments=treatments)
-   
+    
 @app.route('/treatments/<name>')
 def treatment_detail(name):
     return render_template(f'treatments/{name}.html')
- 
+     
 @app.route('/treatments')
 def treatments():
     return render_template('treatments.html')
-
+  
 @app.route('/packages')
 def packages():
     return render_template('packages.html')
