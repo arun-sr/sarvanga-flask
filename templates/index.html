@@ -1,1 +1,652 @@
-<h1>Welcome to Our Clinic</h1><p>Home page content here.</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-356BJBZ023"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-356BJBZ023');
+    </script>
+
+    <meta charset="UTF-8">
+    <title>Best Panchakarma Treatment Center in Trivandrum | Sarvanga</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <!-- Stylesheets -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/fontawesome-all.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/owl.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/flaticon.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/linoor-icons-2.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/animate.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/jquery-ui.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/jquery.fancybox.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/hover.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/jarallax.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/custom-animate.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/swiper.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/rtl.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/responsive.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/index-4.css') }}" rel="stylesheet">
+    <link id="jssDefault" href="{{ url_for('static', filename='css/color-7.css') }}" rel="stylesheet">
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='imgs/favicon.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='imgs/favicon.png') }}" type="image/x-icon">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-x..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+    <style>
+        .fa-check {
+            color: #569700;
+        }
+    </style>
+
+</head>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<body class="page-loaded">
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader" style="display: none;">
+            <div class="icon"></div>
+        </div>
+
+        <!-- Main Header -->
+        <header class="main-header header-style-one header-style-seven fixed-header">
+            <div class="header-upper">
+                <div class="inner-container clearfix">
+                    <div class="auto-container">
+                        <!-- Logo -->
+                        <div class="logo-box">
+                            <div class="logo">
+                                <a href="{{ url_for('home') }}" title="Sarvanga">
+                                    <img src="{{ url_for('static', filename='imgs/logo.png') }}" id="thm-logo"
+                                        alt="Sarvanga Logo">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="nav-outer clearfix">
+                            <!-- Mobile Nav Toggler -->
+                            <div class="mobile-nav-toggler">
+                                <span class="icon flaticon-menu-2"></span>
+                                <span class="txt">Menu</span>
+                            </div>
+
+                            <!-- Navigation Menu -->
+                            <nav class="main-menu navbar-expand-md navbar-light">
+                                <ul class="navigation clearfix">
+                                    <li class="current"><a href="{{ url_for('home') }}">Home</a></li>
+                                    <li><a href="{{ url_for('about') }}">About</a></li>
+                                    <li class="dropdown">
+                                        <a href="{{ url_for('treatments') }}">Treatments</a>
+                                        <ul>
+                                        <li><a href="{{ url_for('treatment_detail', name='vamana') }}">Vamana (EmesisTherapy)</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='virechan') }}">Virechan (PurgationTherapy)</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='nasyam') }}">Nasyam</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='vasti') }}">Vasti (Enema Therapy)</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='raktamoksha') }}">Raktamoksham</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='pashchat_karma') }}">Paschat karma</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='netratharpanam') }}">NetraTharpanam</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='navarakizhi') }}">Navarakizhi</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='pizhichil') }}">Pizhichil</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='januvasthi') }}">Januvasthi</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='kadivasthi') }}">Kadivasthi</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='elakizhi') }}">Elakizhi</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='podikizhi') }}">Podikizhi</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='sirodhara') }}">Sirodhara</a></li>
+                                        <li><a href="{{ url_for('treatment_detail', name='thakradhara') }}">Thakradhara</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="{{ url_for('services') }}">Services</a></li>
+                                    <li><a href="{{ url_for('packages') }}">Packages</a></li>
+                                    <li><a href="{{ url_for('courses') }}">Courses</a></li>
+                                    <li><a href="{{ url_for('review') }}">Review</a></li>
+                                    <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div> <!-- /.auto-container -->
+                </div>
+            </div> <!-- End Header Upper -->
+        </header>
+        <!-- End Main Header -->
+        <!-- Mobile Menu -->
+        <div class="side-menu__block">
+            <div class="side-menu__block-overlay custom-cursor__overlay">
+                <div class="cursor"></div>
+                <div class="cursor-follower"></div>
+            </div>
+
+            <div class="side-menu__block-inner">
+                <div class="side-menu__top justify-content-end">
+                    <a href="#" class="side-menu__toggler side-menu__close-btn">
+                        <img src="{{ url_for('static', filename='imgs/close-1-1.png') }}" alt="Close">
+                    </a>
+                </div>
+
+                <nav class="mobile-nav__container">
+                    <ul class="navigation clearfix">
+                        <li class="current"><a href="{{ url_for('home') }}">Home</a></li>
+                        <li><a href="{{ url_for('about') }}">About</a></li>
+                        <li class="dropdown">
+                            <a href="{{ url_for('treatments') }}">Treatments <div class="dropdown-btn"><span
+                                        class="fa fa-angle-right"></span></div></a>
+                            <ul>
+                                <li><a href="{{ url_for('treatment_detail', name='vamana') }}">Vamana (Emesis
+                                        Therapy)</a></li>
+                                <li><a href="{{ url_for('treatment_detail', name='virechan') }}">Virechan (Purgation
+                                        Therapy)</a></li>
+                                <li><a href="{{ url_for('treatment_detail', name='nasyam') }}">Nasyam</a></li>
+                                <li><a href="{{ url_for('treatment_detail', name='vasti') }}">Vasti (Enema Therapy)</a>
+                                </li>
+                                <li><a href="{{ url_for('treatment_detail', name='raktamoksha') }}">Raktamoksham</a>
+                                </li>
+                                <li><a href="{{ url_for('treatment_detail', name='pashchat_karma') }}">Paschat karma</a>
+                                </li>
+                                <li><a href="{{ url_for('treatment_detail', name='netratharpanam') }}">Netra
+                                        Tharpanam</a></li>
+                                <li><a href="{{ url_for('treatment_detail', name='navarakizhi') }}">Navarakizhi</a></li>
+                                <li><a href="{{ url_for('treatment_detail', name='pizhichil') }}">Pizhichil</a></li>
+                                <li><a href="{{ url_for('treatment_detail', name='januvasthi') }}">Januvasthi</a></li>
+                                <li><a href="{{ url_for('treatment_detail', name='kadivasthi') }}">Kadivasthi</a></li>
+                                <li><a href="{{ url_for('treatment_detail', name='elakizhi') }}">Elakizhi</a></li>
+                                <li><a href="{{ url_for('treatment_detail', name='podikizhi') }}">Podikizhi</a></li>
+                                <li><a href="{{ url_for('treatment_detail', name='sirodhara') }}">Sirodhara</a></li>
+                                <li><a href="{{ url_for('treatment_detail', name='thakradhara') }}">Thakradhara</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{{ url_for('services') }}">Services</a></li>
+                        <li><a href="{{ url_for('packages') }}">Packages</a></li>
+                        <li><a href="{{ url_for('courses') }}">Courses</a></li>
+                        <li><a href="{{ url_for('blogs') }}">Blogs</a></li>
+                        <li><a href="{{ url_for('review') }}">Review</a></li>
+                        <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="side-menu__sep"></div>
+
+                <div class="side-menu__content">
+                    <p>
+                        <a href="tel:+919633767569">+91 9633 76 75 69</a><br>
+                        <a href="tel:+918943438494">+91 89 43 43 84 94</a><br>
+                        <a href="mailto:Sarvanga@gmail.com">Sarvanga@gmail.com</a><br>
+                        <a href="mailto:info@Sarvanga.com">info@Sarvanga.com</a>
+                    </p>
+                    <div class="side-menu__social">
+                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- HEAD: Place inside <head> tag -->
+        <meta name="description"
+            content="Sarvanga is one of the most popular Ayurveda Panchakarma treatment centers in Trivandrum, Kerala | Best ayurvedic hospitals in Trivandrum | Panchakarma center ">
+        <title>Best Panchakarma Treatment Center in Trivandrum | Sarvanga</title>
+
+        <!-- SECTION: Banner -->
+
+        
+        <!-- Banner Section -->
+<section class="banner-section-four">
+    <!-- Navigation -->
+    <div class="banner-section-four__nav">
+        <div class="swiper-button-prev" id="banner-section-four__swiper-button-prev" tabindex="0" role="button">
+            <i class="fa fa-angle-up"></i>
+        </div>
+        <div class="swiper-button-next" id="banner-section-four__swiper-button-next" tabindex="0" role="button">
+            <i class="fa fa-angle-down"></i>
+        </div>
+    </div>
+
+    <!-- Swiper Container -->
+    <div class="swiper banner-swiper">
+        <div class="swiper-wrapper">
+
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+                <div class="banner-slide" style="background-image: url('{{ url_for('static', filename='imgs/banner1.jpg') }}');">
+                    <div class="auto-container">
+                        <div class="text-box animate__animated animate__fadeInUp" style="animation-delay: 0.3s;">
+                            <h2>Experience the soul essence of Ayurveda with us.</h2>
+                            <p>Sarvanga is your serene sanctuary for authentic Ayurvedic healing.</p>
+                            <a href="{{ url_for('treatments') }}" class="theme-btn btn-style-three mt-4">Our Treatments</a>
+                            <a href="{{ url_for('packages') }}" class="theme-btn btn-style-three mt-4">Our Packages</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+                <div class="banner-slide" style="background-image: url('{{ url_for('static', filename='imgs/banner2.jpg') }}');">
+                    <div class="auto-container">
+                        <div class="text-box animate__animated animate__fadeInUp">
+                            <h2>Experience the soul essence of Ayurveda with us.</h2>
+                            <p>Sarvanga is your serene sanctuary for authentic Ayurvedic healing.</p>
+                            <a href="{{ url_for('treatments') }}" class="theme-btn btn-style-three mt-4">Our Treatments</a>
+                            <a href="{{ url_for('packages') }}" class="theme-btn btn-style-three mt-4">Our Packages</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+        <!-- SECTION: About -->
+        <section class="about-section" id="about">
+            <div class="auto-container">
+                <div class="row clearfix">
+
+                    <!-- Image Column -->
+                    <div class="image-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                        <div class="inner">
+                            <div class="wow fadeInLeft animated" data-wow-delay="10ms" data-wow-duration="1500ms">
+                                <img src="{{ url_for('static', filename='imgs/about.jpg') }}" alt=""
+                                    style="border-radius: 10px;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text Column -->
+                    <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 m-auto">
+                        <div class="inner">
+                            <div class="sec-title">
+                                <h2>Who <span class="dot">we are</span></h2>
+                                <div class="lower-text">
+                                    <p>
+                                        Discover the healing power of Ayurveda at <strong>Sarvanga</strong> — Kerala’s most trusted and serene Ayurvedic wellness destination, with state-of-the-art center in <strong>Trivandrum</strong>. Rooted in ancient tradition and guided by modern care, Sarvanga offers a truly personalized experience that brings harmony to your body, mind, and spirit. Whether you’re battling stress, chronic pain, fatigue, or simply seeking to rejuvenate, our wide range of authentic treatments — including <em>Detoxification, Spine and Joint Care, Skincare, Weight Loss, Stress Management, Rejuvenation</em>, and <em>Women’s Wellness</em> — are tailored specifically to your needs.
+                                        </p>
+                                        
+                                        <p>
+                                        At Sarvanga, you're not just a client — you’re family. Our resident Ayurvedic doctors bring decades of expertise, supported by compassionate staff who create a peaceful, homely atmosphere where healing begins the moment you walk in. We use only the finest herbal oils, therapies, and traditional techniques, ensuring every treatment is safe, effective, and deeply revitalizing. Thousands have rediscovered their health and happiness with us — now it's your turn. <strong>Experience the power of Ayurveda, rediscover yourself, and let your wellness journey begin at Sarvanga.</strong>
+                                        </p>
+                                </div>
+                            </div>
+                            <div class="link-box">
+                                <a class="theme-btn btn-style-one" href="{{ url_for('about') }}">
+                                    <i class="btn-curve"></i>
+                                    <span class="btn-title">Discover More</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <section style="background-color: #eeffd6; padding-top: 100px; padding-bottom: 100px;">
+            <div class="auto-container">
+                <div class="row no-gutters">
+                    <div class="col-md-12 col-lg-12 col-xl-12">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="sec-title mb-2">
+                                    <h2>Why you need Ayurveda Detoxification<span class="dot">.</span></h2>
+                                </div>
+                                <p>According to Ayurveda, health is a harmonious balance of mind, body, and spirit,
+                                    achieved through personalized lifestyle practices, natural remedies, and alignment
+                                    with one's unique constitution and the surrounding environment. As per
+                                    detoxification view, health is defined as the body being clear of toxins, the mind
+                                    is at peace, emotions are calm and happy, wastes are efficiently eliminated and
+                                    organs are functioning normally. In a busy, stressful and toxic world, our physical
+                                    and mental systems accumulate toxins causing deterioration in bodily functioning.
+                                    This eventually weakens our systems, which opens the door for chronic, degenerative,
+                                    and non-specific diseases to develop. These can evolve into serious specific
+                                    diseases, ultimately damaging an individual’s health and wellness. Panchakarma can
+                                    help by reversing these negative effects of daily living. It can restore your
+                                    natural state of health and wellness by cleansing your body of toxins, bringing
+                                    balance into your system and improving bodily function. It can also help you sustain
+                                    this process by making positive changes in lifestyle.</p>
+                                <div class="btn-inflex">
+                                    <div class="link-box" style="margin-right: 10px;">
+                                        <a class="theme-btn btn-style-one"
+                                            href="https://www.Sarvanga.com/about.html#panchakarma">
+                                            <i class="btn-curve"></i>
+                                            <span class="btn-title" style="padding: 15px 15px 15px;">PANCHAKARMA: MODE
+                                                OF DETOXIFICATION.</span>
+                                        </a>
+                                    </div>
+                                    <div class="link-box" style="margin-right: 10px;">
+                                        <a class="theme-btn btn-style-one"
+                                            href="https://www.Sarvanga.com/about.html#poorvakarma">
+                                            <i class="btn-curve"></i>
+                                            <span class="btn-title" style="padding: 15px 15px 15px;">POORVA KARMA
+                                                (PRE-PURIFICATION MEASURES).</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 m-auto">
+                                <div class="wow fadeInLeft mb-3 animated" data-wow-delay="0ms"
+                                    data-wow-duration="1500ms"
+                                    style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;">
+                                    <img src="{{ url_for('static', filename='imgs/detox.jpg') }}"
+                                        alt="" style="border-radius: 10px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section style="background-color: #569700; padding-top: 100px; padding-bottom: 100px; display: none;">
+            <div class="auto-container">
+                <div class="row no-gutters">
+                    <div class="col-md-12 col-lg-12 col-xl-6">
+                        <div class="sec-title mb-2">
+                            <h2 style="color: #eeffd6;">PANCHAKARMA: MODE OF DETOXIFICATION.</h2>
+                        </div>
+                        <p style="color: #eeffd6; line-height: 1.5; text-align: justify;">Panchakarma is the cornerstone
+                            to Ayurveda management of disease The Panchakarma therapeutic process appears quite simple
+                            in its application. Panchakarma is a unique, natural, holistic, health-giving series of
+                            therapeutic treatments that cleanse the body’s deep tissues of toxins, open the subtle
+                            channels, and bring life-enhancing energy thereby increasing vitality, inner peace,
+                            confidence and well-being.</p>
+                        <p style="color: #eeffd6; line-height: 1.5; text-align: justify;">Panchakarma is the process
+                            which gets to the root cause of the problem and corrects the essential balance of 'Tridosha'
+                            in body. Panchakarma is not only good for alleviating disease but is also a useful tool in
+                            maintaining excellent health. Ayurveda advises undergoing Panchakarma at the seasonal
+                            changes to clean the body, improve the digestion and to improve the metabolic processes.</p>
+                    </div>
+                    <div class="col-md-12 col-lg-12 col-xl-6" style="border-left: 4px solid #eeffd6;">
+                        <div class="sec-title mb-2">
+                            <h2 style="color: #eeffd6;">POORVA KARMA (PRE-PURIFICATION MEASURES).</h2>
+                        </div>
+                        <p style="color: #eeffd6; line-height: 1.5; text-align: justify;">Before the actual operation of
+                            purification begins, there is a need to prepare the body in prescribed methods to encourage
+                            the body to let go of the toxins. The two procedures are 'snehan' and 'swedan'. Snehan is
+                            the oil massage. Oil is applied to the entire body with a particular type of massage which
+                            helps the toxins to move towards the gastro-intestinal tract. Oil massage also makes the
+                            superficial and deep tissues soft and supple. Snehan is given daily for three to seven days,
+                            as indicated. Swedan is sudation or sweating and is given every day immediately following
+                            the snehan. An herbal concoction may be added to the steam to further loosen the toxins from
+                            the individual. Swedan liquefies the toxins and increases the movement of toxins into the
+                            gastro-intestinal tract. After three to seven days of snehan and swedan, the doshas become
+                            well "ripened". A particular panchakarma method is then given according to the individual's
+                            constitution and disorder, prakruti and vikruti, respectively.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Treatments Swipper  -->
+        <section class="news-two">
+            <div class="auto-container">
+                <div class="sec-title">
+                    <h2>MAJOR PANCHAKARMA TREATMENTS<br> IN AYURVEDA<span class="dot">.</span></h2>
+                </div>
+                <div class="swiper newsSwiper">
+                    <div class="swiper-wrapper">
+                        {% for treatment in treatments %}
+                        <div class="swiper-slide">
+                            <div class="service-nine__card">
+                                <div class="service-nine__card__inner">
+                                    <div class="service-nine__image">
+                                        <img src="{{ url_for('static', filename=treatment.img_src) }}"
+                                            alt="{{ treatment.title }}">
+                                    </div>
+                                    <div class="service-nine__content">
+                                        <h3 class="service-nine__title">
+                                            <a href="{{ treatment.url }}">{{ treatment.title }}</a>
+                                        </h3>
+                                        <p class="service-nine__text">{{ treatment.description }}</p>
+                                        <a href="{{ treatment.url }}" class="service-nine__link"><i
+                                                class="fa fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- service section -->
+        <section class="service-block-three" style="padding-bottom: 100px; background-color: #eeffd6;">
+            <div class="auto-container">
+                <div class="sec-title">
+                    <h2>Reasons to choose<span class="dot">us?</span></h2>
+                </div>
+                <div class="row">
+                    {% for reason in reasons %}
+                    <div class="col-sm-12 col-md-6 col-lg-4 wow fadeInLeft animated"
+                        data-wow-delay="{{ loop.index0 % 3 * 300 }}ms" data-wow-duration="1500ms"
+                        style="visibility: visible; animation-duration: 1500ms; animation-name: fadeInLeft;" data-animation-delay="{{ loop.index0 % 3 * 300 }}">
+                        <div class="service-block-three__single">
+                            <h6><a href="{{ url_for('contact') }}">{{ reason | safe }}</a></h6>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Swiper -->
+        <section class="testimonials-swiper-section" style=" padding-top: 100px; padding-bottom: 100px;">
+            <div class="auto-container">
+                <div class="sec-title">
+                    <h2>WHAT OUR CUSTOMERS SAY<span class="dot">.</span></h2>
+                </div>
+                <div class="swiper testimonialsSwiper">
+                    <div class="swiper-wrapper">
+                        {% for testimonial in testimonials %}
+                        <div class="swiper-slide">
+                            <div class="testi-block">
+                                <div class="inner">
+                                    <div class="icon"><span>"</span></div>
+                                    <div class="info">
+                                        <div class="name">{{ testimonial.name }}</div>
+                                    </div>
+                                    <div class="text">{{ testimonial.text }}</div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="auto-container">
+                <!--Widgets Section-->
+                <div class="widgets-section">
+                    <div class="row clearfix">
+
+                        <!--Column-->
+                        <div class="column col-xl-5 col-lg-6 col-md-6 col-sm-12">
+                            <div class="footer-widget logo-widget">
+                                <div class="widget-content">
+                                    <div class="logo">
+                                        <a href="{{ url_for('home') }}"><img id="fLogo"
+                                                src="{{ url_for('static', filename='imgs/logo.png') }}" alt=""></a>
+                                    </div>
+                                    <div class="text">Sarvanga is one of the most popular Ayurveda treatment centers in
+                                        Kerala, which has fully functional Ayurveda treatment center in the capital city
+                                        Trivandrum. Sarvanga is designed as a tranquil heaven for practicing Ayurveda-
+                                        one of the most ancient and traditional medical sciences.</div>
+                                    <ul class="social-links clearfix">
+                                        <li><a href="https://www.facebook.com/Sarvangaayurvedahospital"
+                                                target="_blank"><span class="fab fa-facebook-square"></span></a></li>
+                                        <li><a href="https://www.instagram.com/Sarvanga/" target="_blank"><span
+                                                    class="fab fa-instagram"></span></a></li>
+                                        <li><a href="{{ url_for('home') }}"><span
+                                                    class="fab fa-youtube"></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Column-->
+                        <div class="column col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                            <div class="footer-widget links-widget">
+                                <div class="widget-content">
+                                    <h6>Explore</h6>
+                                    <div class="row clearfix">
+                                        <div class="row clearfix">
+                                            <div class="col-md-6 col-sm-12">
+                                                <ul>
+                                                    <li class=""><a href="{{ url_for('home') }}">Home</a>
+                                                    </li>
+                                                    <li class=""><a href="{{ url_for('about') }}">About</a>
+                                                    </li>
+                                                    <li class=""><a
+                                                        href="{{ url_for('treatments') }}">Treatments</a>
+                                                    </li>
+                                                    <li class=""><a
+                                                        href="{{ url_for('services') }}">Services</a>
+                                                    </li>
+                                                    <li class=""><a
+                                                            href="{{ url_for('contact') }}">Booking</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12">
+                                                <ul>
+                                                    <li class=""><a
+                                                        href="{{ url_for('courses') }}">Courses</a>
+                                                    </li>
+                                                    <li class=""><a href="{{ url_for('blogs') }}">Blogs</a>
+                                                    </li>
+                                                    <li class=""><a
+                                                            href="{{ url_for('review') }}">Review</a></li>
+                                                    <li class=""><a
+                                                            href="{{ url_for('gallery') }}">Gallery</a>
+                                                    </li>
+                                                    <li class=""><a
+                                                            href="{{ url_for('contact') }}">Contact</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Column-->
+                        <div class="column col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                            <div class="footer-widget info-widget">
+                                <div class="widget-content">
+                                    <h6>Contact</h6>
+                                    <ul class="contact-info">
+                                        <li><span class="icon flaticon-call"></span><a href="tel:+919633767569">+91 9633 76 75 69</a></li>
+                                        <li><span class="icon flaticon-call"></span><a href="tel:+918943438494">+91
+                                            89 43 43 84 94</a></li>
+                                        <li><span class="icon flaticon-email-2"></span><a
+                                                href="mailto:Sarvanga@gmail.com">Sarvanga@gmail.com</a></li>
+                                        <li><span class="icon flaticon-email-2"></span><a
+                                                href="mailto:info@Sarvanga.com">info@Sarvanga.com</a></li>
+                                        <li class="address"><span class="icon flaticon-pin-1"></span> Sarvanga,
+                                            (GK Ayurveda Health Care), GK Junction, NH Bypass, Kallumoodu,
+                                            Thiruvananthapuram, Kerala 695008</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!--End pagewrapper-->
+
+    <a href="{{ url_for('home') }}" data-target="html" class="scroll-to-target scroll-to-top"
+        style="display: inline;"><i class="fa fa-angle-up"></i></a>
+
+    <script>
+        var swiper = new Swiper(".newsSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 5000,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            },
+        });
+
+
+        var testimonialsSwiper = new Swiper('.testimonialsSwiper', {
+            loop: true,
+            pagination: {
+                el: '.testimonialsSwiper .swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 5000,
+            },
+            slidesPerView: 1,
+            spaceBetween: 30,
+        });
+
+        
+        new Swiper(".banner-swiper", {
+        loop: true,
+        effect: "fade",
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+        },
+        navigation: {
+            nextEl: "#banner-section-four__swiper-button-next",
+            prevEl: "#banner-section-four__swiper-button-prev",
+        }
+    });
+
+
+    </script>
+
+</body>
+
+</html>

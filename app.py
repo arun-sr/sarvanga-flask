@@ -1,11 +1,14 @@
 from flask import Flask, render_template, request, redirect, url_for
-
+from consts import treatmentlists, reasons, testimonials
 app = Flask(__name__)
 
 @app.route("/")
+@app.route("/index")
+@app.route("/home")
 def home():
-    return render_template("index.html")
-
+    return render_template("index.html", treatments=treatmentlists,
+                            reasons=reasons, testimonials=testimonials)
+      
 @app.route("/about")
 def about():
     return render_template("about.html")
@@ -13,6 +16,53 @@ def about():
 @app.route("/services")
 def services():
     return render_template("services.html")
+  
+@app.route("/panchakarma")
+def panchakarma_page():
+    treatments = [
+        {
+            "title": "Podikizhi",
+            "url": "https://www.Sarvanga.com/podikizhi.html",
+            "img_src": "imgs/podikizhi.jpg",  # Inside 'static/images/'
+            "description": "This unique therapy utilizes warm, medicated herbal poultices..."
+        },
+        {
+            "title": "Njavarakizhi",
+            "url": "https://www.Sarvanga.com/njavarakizhi.html",
+            "img_src": "imgs/njavarakizhi.jpg",
+            "description": "A nourishing therapy using a special rice variety boiled with herbs and milk..."
+        },
+        # Add more treatments here
+    ]
+    return render_template("panchakarma.html", treatments=treatments)
+   
+@app.route('/treatments/<name>')
+def treatment_detail(name):
+    return render_template(f'treatments/{name}.html')
+ 
+@app.route('/treatments')
+def treatments():
+    return render_template('treatments.html')
+
+@app.route('/packages')
+def packages():
+    return render_template('packages.html')
+
+@app.route('/courses')
+def courses():
+    return render_template('courses.html')
+
+@app.route('/blogs')
+def blogs():
+    return render_template('blogs.html')
+
+@app.route('/review')
+def review():
+    return render_template('review.html')
+
+@app.route("/gallery")
+def gallery():
+    return render_template("gallery.html")
 
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
@@ -30,3 +80,8 @@ def thank_you():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+ 
+   
+      
+    
