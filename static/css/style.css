@@ -26542,7 +26542,7 @@ img.lazy-image.loaded {
       display: inline-block;
   }
 }
-
+/* Default floating button position */
 .floating-buttons.top-right {
     position: fixed;
     top: 20px;
@@ -26553,22 +26553,27 @@ img.lazy-image.loaded {
     gap: 10px;
 }
 
-.float-call, .float-whatsapp {
-    background-color: #25d366; /* WhatsApp default green */
-    color: white;
+.floating-buttons a {
+    width: 45px;
+    height: 45px;
+    background-color: #25d366;
+    color: #fff;
     border-radius: 50%;
-    padding: 12px 15px;
-    font-size: 20px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
+    line-height: 45px;
+    font-size: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
 }
 
-.float-call {
-    background-color: #28a745; /* Call button green */
+.floating-buttons .float-call {
+    background-color: #0b8457;
 }
 
-.float-call:hover, .float-whatsapp:hover {
-    transform: scale(1.1);
-    text-decoration: none;
+/* ✅ Fix position on smaller screens */
+@media screen and (max-width: 768px) {
+    .floating-buttons.top-right {
+        top: 140px; /* push down below the menu icon */
+        right: 15px;
+    }
 }
