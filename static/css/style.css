@@ -26542,3 +26542,33 @@ img.lazy-image.loaded {
       display: inline-block;
   }
 }
+
+.floating-buttons.top-right {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.float-call, .float-whatsapp {
+    background-color: #25d366; /* WhatsApp default green */
+    color: white;
+    border-radius: 50%;
+    padding: 12px 15px;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.float-call {
+    background-color: #28a745; /* Call button green */
+}
+
+.float-call:hover, .float-whatsapp:hover {
+    transform: scale(1.1);
+    text-decoration: none;
+}

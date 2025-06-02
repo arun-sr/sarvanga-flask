@@ -53,6 +53,12 @@
         }
     </style>
 
+    <link rel="apple-touch-icon" sizes="180x180"   href="{{ url_for('static', filename='imgs/apple-touch-icon.png') }}"
+    <link rel="icon" type="image/png" sizes="32x32"  href="{{ url_for('static', filename='imgs/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16"  href="{{ url_for('static', filename='imgs/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='imgs/site.webmanifest') }}">
+    
+
 </head>
 
 
@@ -219,10 +225,10 @@
 
             <!-- Slide 1 -->
             <div class="swiper-slide">
-                <div class="banner-slide" style="background-image: url('{{ url_for('static', filename='imgs/banner1.jpg') }}');">
+                <div class="banner-slide" style=" background-color: rgba(0, 0, 0, 0.9); background-image: url('{{ url_for('static', filename='imgs/banner1.jpg') }}');">
                     <div class="auto-container">
                         <div class="text-box animate__animated animate__fadeInUp" style="animation-delay: 0.3s;">
-                            <h2>Experience the soul essence of Ayurveda with us.</h2>
+                            <h2>Step into the soul of Ayurveda and rediscover natural healing.</h2>
                             <p>Sarvanga is your serene sanctuary for authentic Ayurvedic healing.</p>
                             <a href="{{ url_for('treatments') }}" class="theme-btn btn-style-three mt-4">Our Treatments</a>
                             <a href="{{ url_for('packages') }}" class="theme-btn btn-style-three mt-4">Our Packages</a>
@@ -236,7 +242,7 @@
                 <div class="banner-slide" style="background-image: url('{{ url_for('static', filename='imgs/banner2.jpg') }}');">
                     <div class="auto-container">
                         <div class="text-box animate__animated animate__fadeInUp">
-                            <h2>Experience the soul essence of Ayurveda with us.</h2>
+                            <h2>Step into the soul of Ayurveda and rediscover natural healing.</h2>
                             <p>Sarvanga is your serene sanctuary for authentic Ayurvedic healing.</p>
                             <a href="{{ url_for('treatments') }}" class="theme-btn btn-style-three mt-4">Our Treatments</a>
                             <a href="{{ url_for('packages') }}" class="theme-btn btn-style-three mt-4">Our Packages</a>
@@ -580,6 +586,18 @@
 
     <a href="{{ url_for('home') }}" data-target="html" class="scroll-to-target scroll-to-top"
         style="display: inline;"><i class="fa fa-angle-up"></i></a>
+
+    <!-- Floating Call and WhatsApp Buttons -->
+    <div class="floating-buttons top-right">
+        <a href="tel:+919633767569" class="float-call" title="Call Us" target="_blank">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+        <a href="https://wa.me/919633767569" class="float-whatsapp" title="WhatsApp Us" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
