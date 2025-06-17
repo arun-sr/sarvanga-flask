@@ -1,66 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block title %}Best Panchakarma Treatment Center in Trivandrum | Sarvanga{% endblock %}
 
-<head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-356BJBZ023"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-356BJBZ023');
-    </script>
-
-    <meta charset="UTF-8">
-    <title>Best Panchakarma Treatment Center in Trivandrum | Sarvanga</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-
-    <!-- Stylesheets -->
-    <link rel="preconnect" href="https://fonts.gstatic.com/">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/fontawesome-all.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/owl.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/flaticon.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/linoor-icons-2.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/animate.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/jquery-ui.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/jquery.fancybox.min.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/hover.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/jarallax.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/custom-animate.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/swiper.min.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/rtl.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/responsive.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/index-4.css') }}" rel="stylesheet">
-    <link id="jssDefault" href="{{ url_for('static', filename='css/color-7.css') }}" rel="stylesheet">
-
-    <link rel="shortcut icon" href="{{ url_for('static', filename='imgs/favicon.png') }}" type="image/x-icon">
-    <link rel="icon" href="{{ url_for('static', filename='imgs/favicon.png') }}" type="image/x-icon">
-
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        integrity="sha512-x..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-    <style>
-        .fa-check {
-            color: #569700;
-        }
-    </style>
-
-    <link rel="apple-touch-icon" sizes="180x180"   href="{{ url_for('static', filename='imgs/apple-touch-icon.png') }}"
-    <link rel="icon" type="image/png" sizes="32x32"  href="{{ url_for('static', filename='imgs/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16"  href="{{ url_for('static', filename='imgs/favicon-16x16.png') }}">
-    <link rel="manifest" href="{{ url_for('static', filename='imgs/site.webmanifest') }}">
-    
-
-</head>
-
+{% block content %}
 
 <body class="page-loaded">
     <div class="page-wrapper">
@@ -69,138 +10,6 @@
         <div class="preloader" style="display: none;">
             <div class="icon"></div>
         </div>
-
-        <!-- Main Header -->
-        <header class="main-header header-style-one header-style-seven fixed-header">
-            <div class="header-upper">
-                <div class="inner-container clearfix">
-                    <div class="auto-container">
-                        <!-- Logo -->
-                        <div class="logo-box">
-                            <div class="logo">
-                                <a href="{{ url_for('home') }}" title="Sarvanga">
-                                    <img src="{{ url_for('static', filename='imgs/logo.png') }}" id="thm-logo"
-                                        alt="Sarvanga Logo">
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="nav-outer clearfix">
-                            <!-- Mobile Nav Toggler -->
-                            <a href="#" class="side-menu__toggler" style="font-size: 24px;">&#9776;</a>
-
-                            <!-- Navigation Menu -->
-                            <nav class="main-menu navbar-expand-md navbar-light">
-                                <ul class="navigation clearfix">
-                                    <li class="current"><a href="{{ url_for('home') }}">Home</a></li>
-                                    <li><a href="{{ url_for('about') }}">About</a></li>
-                                    <li class="dropdown">
-                                        <a href="{{ url_for('treatments') }}">Treatments</a>
-                                        <ul>
-                                        <li><a href="{{ url_for('treatment_detail', name='vamana') }}">Vamana (EmesisTherapy)</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='virechan') }}">Virechan (PurgationTherapy)</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='nasyam') }}">Nasyam</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='vasti') }}">Vasti (Enema Therapy)</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='raktamokshana') }}">Raktamoksham</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='pashchat_karma') }}">Paschat karma</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='netratharpanam') }}">NetraTharpanam</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='navarakizhi') }}">Navarakizhi</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='pizhichil') }}">Pizhichil</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='januvasthi') }}">Januvasthi</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='kadivasthi') }}">Kadivasthi</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='elakizhi') }}">Elakizhi</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='podikizhi') }}">Podikizhi</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='sirodhara') }}">Sirodhara</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='thakradhara') }}">Thakradhara</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="{{ url_for('services') }}">Services</a></li>
-                                    <li><a href="{{ url_for('packages') }}">Packages</a></li>
-                                    <li><a href="{{ url_for('courses') }}">Courses</a></li>
-                                    <li><a href="{{ url_for('review') }}">Review</a></li>
-                                    <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
-                                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div> <!-- /.auto-container -->
-                </div>
-            </div> <!-- End Header Upper -->
-        </header>
-        <!-- End Main Header -->
-
-        <!-- Mobile Menu -->
-        <div class="side-menu__block">
-            <div class="side-menu__block-overlay custom-cursor__overlay">
-                <div class="cursor"></div>
-                <div class="cursor-follower"></div>
-            </div>
-
-            <div class="side-menu__block-inner">
-                <div class="side-menu__top justify-content-end">
-                    <a href="#" class="side-menu__toggler side-menu__close-btn">
-                        <img src="{{ url_for('static', filename='imgs/close.png') }}" alt="Close">
-                    </a>
-                </div>
-
-                <nav class="mobile-nav__container">
-                    <ul class="navigation clearfix">
-                        <li class="current"><a href="{{ url_for('home') }}">Home</a></li>
-                        <li><a href="{{ url_for('about') }}">About</a></li>
-                        <li class="dropdown">
-                            <a href="{{ url_for('treatments') }}">Treatments</a>
-                            <div class="dropdown-btn"><span class="fa fa-angle-right"></span></div>
-                            <ul>
-                                <li><a href="{{ url_for('treatment_detail', name='vamana') }}">Vamana (Emesis
-                                        Therapy)</a></li>
-                                <li><a href="{{ url_for('treatment_detail', name='virechan') }}">Virechan (Purgation
-                                        Therapy)</a></li>
-                                <li><a href="{{ url_for('treatment_detail', name='nasyam') }}">Nasyam</a></li>
-                                <li><a href="{{ url_for('treatment_detail', name='vasti') }}">Vasti (Enema Therapy)</a>
-                                </li>
-                                <li><a href="{{ url_for('treatment_detail', name='raktamoksha') }}">Raktamoksham</a>
-                                </li>
-                                <li><a href="{{ url_for('treatment_detail', name='pashchat_karma') }}">Paschat karma</a>
-                                </li>
-                                <li><a href="{{ url_for('treatment_detail', name='netratharpanam') }}">Netra
-                                        Tharpanam</a></li>
-                                <li><a href="{{ url_for('treatment_detail', name='navarakizhi') }}">Navarakizhi</a></li>
-                                <li><a href="{{ url_for('treatment_detail', name='pizhichil') }}">Pizhichil</a></li>
-                                <li><a href="{{ url_for('treatment_detail', name='januvasthi') }}">Januvasthi</a></li>
-                                <li><a href="{{ url_for('treatment_detail', name='kadivasthi') }}">Kadivasthi</a></li>
-                                <li><a href="{{ url_for('treatment_detail', name='elakizhi') }}">Elakizhi</a></li>
-                                <li><a href="{{ url_for('treatment_detail', name='podikizhi') }}">Podikizhi</a></li>
-                                <li><a href="{{ url_for('treatment_detail', name='sirodhara') }}">Sirodhara</a></li>
-                                <li><a href="{{ url_for('treatment_detail', name='thakradhara') }}">Thakradhara</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="{{ url_for('services') }}">Services</a></li>
-                        <li><a href="{{ url_for('packages') }}">Packages</a></li>
-                        <li><a href="{{ url_for('courses') }}">Courses</a></li>
-                        <li><a href="{{ url_for('blogs') }}">Blogs</a></li>
-                        <li><a href="{{ url_for('review') }}">Review</a></li>
-                        <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
-                        <li><a href="{{ url_for('contact') }}">Contact</a></li>
-                    </ul>
-                </nav>
-
-                <div class="side-menu__sep"></div>
-                <div class="side-menu__content">
-                    <p>
-                        <a href="tel:+919633767569">+91 9633 76 75 69</a><br>
-                        <a href="tel:+918943438494">+91 89 43 43 84 94</a><br>
-                        <a href="mailto:Sarvanga@gmail.com">Sarvanga@gmail.com</a><br>
-                        <a href="mailto:info@Sarvanga.com">info@Sarvanga.com</a>
-                    </p>
-                    <div class="side-menu__social">
-                        <a href="#"><i class="fab fa-facebook-square"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
 
         <!-- HEAD: Place inside <head> tag -->
         <meta name="description"
@@ -413,10 +222,10 @@
                                     </div>
                                     <div class="service-nine__content">
                                         <h3 class="service-nine__title">
-                                            <a href="{{ url_for('treatment_detail', name=treatment.url) }}">{{ treatment.title }}</a>
+                                            <a href="{{ url_for('treatments_details', name=treatment.url) }}">{{ treatment.title }}</a>
                                         </h3>
-                                        <p class="service-nine__text">{{ treatment.description }}</p>
-                                        <a href="{{ url_for('treatment_detail', name=treatment.url) }}" class="service-nine__link"><i
+                                        <p class="service-nine__text">{{ treatment.short_description}}</p>
+                                        <a href="{{ url_for('treatments_details', name=treatment.url) }}" class="service-nine__link"><i
                                                 class="fa fa-angle-right"></i></a>
                                                 
                                     </div>
@@ -478,130 +287,12 @@
                 </div>
             </div>
         </section>
-
-        <!-- Main Footer -->
-        <footer class="main-footer">
-            <div class="auto-container">
-                <!--Widgets Section-->
-                <div class="widgets-section">
-                    <div class="row clearfix">
-
-                        <!--Column-->
-                        <div class="column col-xl-5 col-lg-6 col-md-6 col-sm-12">
-                            <div class="footer-widget logo-widget">
-                                <div class="widget-content">
-                                    <div class="logo">
-                                        <a href="{{ url_for('home') }}"><img id="fLogo"
-                                                src="{{ url_for('static', filename='imgs/logo.png') }}" alt=""></a>
-                                    </div>
-                                    <div class="text">Sarvanga is one of the most popular Ayurveda treatment centers in
-                                        Kerala, which has fully functional Ayurveda treatment center in the capital city
-                                        Trivandrum. Sarvanga is designed as a tranquil heaven for practicing Ayurveda-
-                                        one of the most ancient and traditional medical sciences.</div>
-                                    <ul class="social-links clearfix">
-                                        <li><a href="https://www.facebook.com/Sarvangaayurvedahospital"
-                                                target="_blank"><span class="fab fa-facebook-square"></span></a></li>
-                                        <li><a href="https://www.instagram.com/Sarvanga/" target="_blank"><span
-                                                    class="fab fa-instagram"></span></a></li>
-                                        <li><a href="{{ url_for('home') }}"><span
-                                                    class="fab fa-youtube"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Column-->
-                        <div class="column col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                            <div class="footer-widget links-widget">
-                                <div class="widget-content">
-                                    <h6>Explore</h6>
-                                    <div class="row clearfix">
-                                        <div class="row clearfix">
-                                            <div class="col-md-6 col-sm-12">
-                                                <ul>
-                                                    <li class=""><a href="{{ url_for('home') }}">Home</a>
-                                                    </li>
-                                                    <li class=""><a href="{{ url_for('about') }}">About</a>
-                                                    </li>
-                                                    <li class=""><a
-                                                        href="{{ url_for('treatments') }}">Treatments</a>
-                                                    </li>
-                                                    <li class=""><a
-                                                        href="{{ url_for('services') }}">Services</a>
-                                                    </li>
-                                                    <li class=""><a
-                                                            href="{{ url_for('contact') }}">Booking</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-6 col-sm-12">
-                                                <ul>
-                                                    <li class=""><a
-                                                        href="{{ url_for('courses') }}">Courses</a>
-                                                    </li>
-                                                    <li class=""><a href="{{ url_for('blogs') }}">Blogs</a>
-                                                    </li>
-                                                    <li class=""><a
-                                                            href="{{ url_for('review') }}">Review</a></li>
-                                                    <li class=""><a
-                                                            href="{{ url_for('gallery') }}">Gallery</a>
-                                                    </li>
-                                                    <li class=""><a
-                                                            href="{{ url_for('contact') }}">Contact</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Column-->
-                        <div class="column col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                            <div class="footer-widget info-widget">
-                                <div class="widget-content">
-                                    <h6>Contact</h6>
-                                    <ul class="contact-info">
-                                        <li><span class="icon flaticon-call"></span><a href="tel:+919633767569">+91 9633 76 75 69</a></li>
-                                        <li><span class="icon flaticon-call"></span><a href="tel:+918943438494">+91
-                                            89 43 43 84 94</a></li>
-                                        <li><span class="icon flaticon-email-2"></span><a
-                                                href="mailto:Sarvanga@gmail.com">Sarvanga@gmail.com</a></li>
-                                        <li><span class="icon flaticon-email-2"></span><a
-                                                href="mailto:info@Sarvanga.com">info@Sarvanga.com</a></li>
-                                        <li class="address"><span class="icon flaticon-pin-1"></span> Sarvanga,
-                                            (GK Ayurveda Health Care), GK Junction, NH Bypass, Kallumoodu,
-                                            Thiruvananthapuram, Kerala 695008</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
     <!--End pagewrapper-->
 
     <a href="{{ url_for('home') }}" data-target="html" class="scroll-to-target scroll-to-top"
         style="display: inline;"><i class="fa fa-angle-up"></i></a>
 
-    <!-- Floating Call and WhatsApp Buttons -->
-    <div class="floating-buttons top-right">
-        <a href="tel:+919633767569" class="float-call" title="Call Us" target="_blank">
-            <i class="fas fa-phone-alt"></i>
-        </a>
-        <a href="https://wa.me/919633767569" class="float-whatsapp" title="WhatsApp Us" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-    </div>
-
-
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-
-
 </body>
 </html>
+
+{% endblock %}

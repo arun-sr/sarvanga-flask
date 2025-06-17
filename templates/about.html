@@ -1,28 +1,82 @@
-<section class="about-sarvanga">
-    <div class="auto-container">
-        <div class="content-box">
-            <h2><span>🌿</span> Welcome to <strong>Sarvanga</strong> – Kerala’s Premier Destination for Authentic Ayurveda Healing</h2>
-            <p>
-                Step into the serene world of <strong>Sarvanga</strong>, where ancient wisdom meets modern well-being. Located in the heart of <strong>Trivandrum</strong></strong>, Sarvanga is more than just an Ayurveda center — it’s a <em>soulful sanctuary</em> designed to rejuvenate your mind, body, and spirit.
-            </p>
+{% extends "base.html" %}
+{% block title %}About Sarvanga | Best Ayurveda Center in Trivandrum{% endblock %}
 
-            <h4><span>✨</span> Why Choose Sarvanga?</h4>
-            <ul class="sarvanga-highlights">
-                <li>🧘‍♀️ <strong>Personalized Ayurveda Programs</strong> tailored to your unique body constitution – including <em>Detoxification, Rejuvenation, Stress Relief, Spine & Joint Care, Weight Loss, Skincare</em>, and exclusive <em>Women Wellness Therapies</em>.</li>
-                <li>👨‍⚕️ <strong>Resident Ayurveda Doctors</strong> with decades of experience, backed by trained, caring therapists who treat you like family.</li>
-                <li>🛏️ <strong>Homely Atmosphere</strong> with peaceful treatment spaces designed for deep healing and complete relaxation.</li>
-                <li>🌺 <strong>Traditional Oils & Herbs</strong>, authentically sourced and prepared, ensuring maximum healing benefits — just the way Ayurveda intended.</li>
-                <li>🧘‍♂️ <strong>Weekend and Holiday Retreats</strong> to escape the city and reset your energy.</li>
-                <li>🌱 <strong>Affordable wellness packages</strong> starting at just ₹999 – perfect for working professionals, homemakers, and seniors alike.</li>
-            </ul>
+{% block content %}
 
-            <p>
-                At Sarvanga, every therapy is more than a treatment — it's a journey toward inner balance and lasting well-being. Whether you're looking to de-stress, heal chronic ailments, or simply feel younger, <strong>your transformation begins here</strong>.
-            </p>
-
-            <p><strong>📞 Call us today</strong> to schedule your consultation or visit for a <span style="color: #28a745;"><strong>free wellness assessment</strong></span>. Your body will thank you, your mind will find peace, and your spirit will rejoice.</p>
-
-            <p><strong>➡️ Experience Ayurveda the way it was meant to be — only at Sarvanga.</strong></p>
+<!-- Page Banner -->
+<section class="page-banner">
+    <div class="image-layer" style="background-image:url('{{ url_for('static', filename='imgs/about_banner.jpg') }}');"></div>
+    <div class="banner-inner">
+        <div class="auto-container">
+            <div class="inner-container clearfix">
+                <div class="page-nav">
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
+<!-- About Section -->
+<section class="about-section pt-5 pb-5" style="background-color: #f7fcf3;">
+    <div class="auto-container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <img src="{{ url_for('static', filename='imgs/about.jpg') }}" alt="About Sarvanga Ayurveda" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="mb-3 text-success">🌿 Welcome to Sarvanga</h2>
+                <p class="lead">Kerala’s Premier Destination for Authentic Ayurveda Healing</p>
+                <p>Step into the serene world of Sarvanga, where ancient Ayurvedic wisdom meets modern well-being. Nestled in the heart of Trivandrum, we are more than just a wellness center — we’re a soulful sanctuary for complete mind-body healing.</p>
+                <a href="{{ url_for('contact') }}" class="theme-btn btn-style-one mt-3"><span class="btn-title">Book Your Visit</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Sarvanga Section -->
+<section class="card border-1 shadow-sm h-100 text-center px-4 py-5 rounded-4 feature-tile">
+    <div class="auto-container">
+    <div class="sec-title text-center mb-5">
+        <h2 class="fw-bold">✨ Why Choose Sarvanga?</h2>
+        <p class="text-muted">Expert care, serene space, and authentic Ayurveda for lasting wellness.</p>
+    </div>
+    <div class="row g-4">
+        {% set features = [
+            {'icon': '🧘‍♀️', 'title': 'Tailored Therapies', 'desc': 'Personalized programs like detox, rejuvenation, stress relief, joint care, and women’s wellness.'},
+            {'icon': '👨‍⚕️', 'title': 'Trusted Expertise', 'desc': 'Led by seasoned Ayurveda doctors and trained, compassionate therapists.'},
+            {'icon': '🛏️', 'title': 'Healing Ambience', 'desc': 'Peaceful, homely environment designed for relaxation and deep recovery.'},
+            {'icon': '🌺', 'title': 'Authentic Oils & Herbs', 'desc': 'Traditionally prepared herbal treatments for maximum benefit.'},
+            {'icon': '🧘‍♂️', 'title': 'Wellness Retreats', 'desc': 'Weekend & holiday getaways to relax, recharge and restore energy.'},
+            {'icon': '🌱', 'title': 'Affordable Care', 'desc': 'Healing packages starting at ₹999, perfect for every age and lifestyle.'},
+            {'icon': '💬', 'title': '24x7 Support', 'desc': 'Quick response on Call & WhatsApp for emergencies and inquiries.'},
+            {'icon': '📍', 'title': 'Prime Location', 'desc': 'Located at Kallumoodu, NH Bypass, Trivandrum – easily reachable.'}
+        ] %}
+        
+        {% for feature in features %}
+        <div class="col-sm-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100 text-center p-4 rounded-4 feature-tile">
+                <div class="icon-circle mx-auto mb-3">
+                    <span class="fs-3">{{ feature.icon }}</span>
+                </div>
+                <h6 class="fw-semibold mb-2 text-success">{{ feature.title }}</h6>
+                <p class="text-muted small mb-0">{{ feature.desc }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+</div>
+
+</section>
+
+<!-- Call To Action -->
+<section class="call-to-action-section pt-5 pb-5" style="background-color: #eafbe3;">
+    <div class="auto-container text-center">
+        <h3 class="mb-3 text-success">➡️ Experience Ayurveda the way it was meant to be — only at Sarvanga</h3>
+        <p class="mb-4">Your body will thank you, your mind will find peace, and your spirit will rejoice.</p>
+        <a href="{{ url_for('contact') }}" class="theme-btn btn-style-one"><span class="btn-title">Get a Free Wellness Assessment</span></a>
+    </div>
+</section>
+
+{% endblock %}

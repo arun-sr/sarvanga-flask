@@ -18,10 +18,10 @@
                         </div>
                         <div class="service-nine__content p-3">
                             <h3 class="service-nine__title">
-                                <a href="{{ url_for('treatment_detail', name=treatment.url) }}">{{ treatment.title }}</a>
+                                <a href="{{ url_for('treatments_details', name=treatment.url) }}">{{ treatment.title }}</a>
                             </h3>
-                            <p class="service-nine__text">{{ treatment.description }}</p>
-                            <a href="{{ url_for('treatment_detail', name=treatment.url) }}" class="service-nine__link">
+                            <p class="service-nine__text">{{ treatment.short_description}}</p>
+                            <a href="{{ url_for('treatments_details', name=treatment.url) }}" class="service-nine__link">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         </div>

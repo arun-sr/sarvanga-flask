@@ -1,12 +1,17 @@
 from flask import Flask, render_template, request, redirect, url_for
-from consts import treatmentlists, reasons, testimonials, treatment_data
+from consts import reasons, testimonials, treatments_catalog
 app = Flask(__name__)
 
+
+@app.context_processor
+def inject_treatments():
+    return dict(treatments_catalog=treatments_catalog)
+  
 @app.route("/")
 @app.route("/index")
 @app.route("/home")
 def home():
-    return render_template("index.html", treatments=treatmentlists,
+    return render_template("index.html", treatments=treatments_catalog.values(),
                             reasons=reasons, testimonials=testimonials)
        
 @app.route("/about")
@@ -18,18 +23,21 @@ def services():
     return render_template("services.html")
 
 @app.route('/treatments/<name>')
-def treatment_detail(name):
-    treatment = treatment_data.get(name)
+def treatments_details(name):
+    treatment = treatments_catalog.get(name)
     if not treatment:
         return render_template('404.html'), 404
-
-    return render_template('treatment_detail.html', treatment=treatment, all_treatments=treatment_data)
+    return render_template('treatments_details.html', treatment=treatment, all_treatments=treatments_catalog)
+  
+                                          
+# @app.route('/treatments')
+# def treatments():
+#     return render_template('treatments.html', treatments=treatmentlists)
  
-     
 @app.route('/treatments')
 def treatments():
-    return render_template('treatments.html', treatments=treatmentlists)
-        
+    return render_template('treatments.html', treatments=treatments_catalog.values())
+
 @app.route('/packages')
 def packages():
     return render_template('packages.html')

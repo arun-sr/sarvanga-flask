@@ -11889,8 +11889,8 @@ img.lazy-image.loaded {
   position: absolute;
   right: 0;
   top: -1px;
-  font-family: "Flaticon";
-  content: "\f15f";
+  font-family: "Font Awesome 6 Free";
+  content: "\f105";
   opacity: 1;
   font-size: 10px;
   line-height: 30px;
@@ -26759,4 +26759,19 @@ img.lazy-image.loaded {
 .treatment-wrapper .sidebar-box ul li a:hover {
     color: #569700;
     font-weight: 600;
+}
+.shadow-sm:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #e8f5e9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

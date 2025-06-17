@@ -24,7 +24,7 @@
 <section class="events-details">
     <div class="auto-container">
         <div class="events-one__image mb-4">
-                <img src="{{ url_for('static', filename=treatment.img) }}" class="img-fluid rounded shadow" alt="{{ treatment.title }}">
+                <img src="{{ url_for('static', filename=treatment.banner_img) }}" class="img-fluid rounded shadow" alt="{{ treatment.title }}">
         </div>
         <div class="row">
             <!-- Left: Main Content -->
@@ -68,7 +68,7 @@
                             <ul>
                                 {% for key, item in all_treatments.items() %}
                                 <li class="{% if key == treatment.url %}active{% endif %}">
-                                    <a href="{{ url_for('treatment_detail', name=key) }}">{{ item.title }}</a>
+                                    <a href="{{ url_for('treatments_details', name=key) }}">{{ item.title }}</a>
                                 </li>
                                 {% endfor %}
                             </ul>

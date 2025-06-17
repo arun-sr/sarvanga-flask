@@ -25,28 +25,18 @@
                                     <li class="dropdown">
                                         <a href="{{ url_for('treatments') }}">Treatments</a>
                                         <ul>
-                                        <li><a href="{{ url_for('treatment_detail', name='vamana') }}">Vamana (EmesisTherapy)</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='virechan') }}">Virechan (PurgationTherapy)</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='nasyam') }}">Nasyam</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='vasti') }}">Vasti (Enema Therapy)</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='raktamokshana') }}">Raktamoksham</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='pashchat_karma') }}">Paschat karma</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='netratharpanam') }}">NetraTharpanam</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='navarakizhi') }}">Navarakizhi</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='pizhichil') }}">Pizhichil</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='januvasthi') }}">Januvasthi</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='kadivasthi') }}">Kadivasthi</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='elakizhi') }}">Elakizhi</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='podikizhi') }}">Podikizhi</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='sirodhara') }}">Sirodhara</a></li>
-                                        <li><a href="{{ url_for('treatment_detail', name='thakradhara') }}">Thakradhara</a></li>
+                                            {% for key, treatment in treatments_catalog.items() %}
+                                                <li>
+                                                    <a href="{{ url_for('treatments_details', name=key) }}">{{ treatment.title }}</a>
+                                                </li>
+                                            {% endfor %}
                                         </ul>
                                     </li>
                                     <li><a href="{{ url_for('services') }}">Services</a></li>
                                     <li><a href="{{ url_for('packages') }}">Packages</a></li>
-                                    <li><a href="{{ url_for('courses') }}">Courses</a></li>
+                                    <!-- <li><a href="{{ url_for('courses') }}">Courses</a></li>
                                     <li><a href="{{ url_for('review') }}">Review</a></li>
-                                    <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                                    <li><a href="{{ url_for('gallery') }}">Gallery</a></li> -->
                                     <li><a href="{{ url_for('contact') }}">Contact</a></li>
                                 </ul>
                             </nav>
@@ -79,27 +69,11 @@
                             <a href="{{ url_for('treatments') }}">Treatments</a>
                             <div class="dropdown-btn"><span class="fa fa-angle-right"></span></div>
                             <ul>
-                                <li><a href="{{ url_for('treatment_detail', name='vamana') }}">Vamana (Emesis
-                                        Therapy)</a></li>
-                                <li><a href="{{ url_for('treatment_detail', name='virechan') }}">Virechan (Purgation
-                                        Therapy)</a></li>
-                                <li><a href="{{ url_for('treatment_detail', name='nasyam') }}">Nasyam</a></li>
-                                <li><a href="{{ url_for('treatment_detail', name='vasti') }}">Vasti (Enema Therapy)</a>
-                                </li>
-                                <li><a href="{{ url_for('treatment_detail', name='raktamoksha') }}">Raktamoksham</a>
-                                </li>
-                                <li><a href="{{ url_for('treatment_detail', name='pashchat_karma') }}">Paschat karma</a>
-                                </li>
-                                <li><a href="{{ url_for('treatment_detail', name='netratharpanam') }}">Netra
-                                        Tharpanam</a></li>
-                                <li><a href="{{ url_for('treatment_detail', name='navarakizhi') }}">Navarakizhi</a></li>
-                                <li><a href="{{ url_for('treatment_detail', name='pizhichil') }}">Pizhichil</a></li>
-                                <li><a href="{{ url_for('treatment_detail', name='januvasthi') }}">Januvasthi</a></li>
-                                <li><a href="{{ url_for('treatment_detail', name='kadivasthi') }}">Kadivasthi</a></li>
-                                <li><a href="{{ url_for('treatment_detail', name='elakizhi') }}">Elakizhi</a></li>
-                                <li><a href="{{ url_for('treatment_detail', name='podikizhi') }}">Podikizhi</a></li>
-                                <li><a href="{{ url_for('treatment_detail', name='sirodhara') }}">Sirodhara</a></li>
-                                <li><a href="{{ url_for('treatment_detail', name='thakradhara') }}">Thakradhara</a></li>
+                                {% for key, treatment in treatments_catalog.items() %}
+                                    <li>
+                                        <a href="{{ url_for('treatments_details', name=key) }}">{{ treatment.title }}</a>
+                                    </li>
+                                {% endfor %}
                             </ul>
                         </li>
                         <li><a href="{{ url_for('services') }}">Services</a></li>
