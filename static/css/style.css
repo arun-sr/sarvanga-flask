@@ -26542,7 +26542,8 @@ img.lazy-image.loaded {
       display: inline-block;
   }
 }
-/* Default floating button position */
+
+/* Default floating button position
 .floating-buttons.top-right {
     position: fixed;
     top: 20px;
@@ -26569,11 +26570,193 @@ img.lazy-image.loaded {
 .floating-buttons .float-call {
     background-color: #0b8457;
 }
-
+ */
 /* ✅ Fix position on smaller screens */
 @media screen and (max-width: 768px) {
     .floating-buttons.top-right {
         top: 140px; /* push down below the menu icon */
         right: 15px;
     }
+}
+
+/*
+.floating-buttons a {
+    position: relative;
+    display: inline-block;
+}
+
+.floating-buttons a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    background-color: rgba(0, 255, 0, 0.2);
+    border-radius: 50%;
+    z-index: -1;
+    animation: pulse-ring 1.5s infinite;
+}
+*/
+@keyframes pulse-ring {
+    0% {
+        transform: translate(-50%, -50%) scale(0.6);
+        opacity: 0.7;
+    }
+    70% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.floating-buttons.top-right {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.btn-floating {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 45px;
+    width: 45px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    padding: 0 15px;
+    overflow: hidden;
+    text-decoration: none;
+    font-size: 18px;
+    transition: width 0.4s ease, border-radius 0.4s ease, background-color 0.4s ease;
+}
+/*
+.btn-floating i {
+    z-index: 2;
+    min-width: 20px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+ Label hidden by default 
+.btn-floating .label {
+    white-space: nowrap;
+    opacity: 1;
+    transform: translateX(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}*/
+
+/* On hover: expand and show label */
+.btn-floating:hover {
+    width: 180px;
+    border-radius: 30px;
+}
+
+/* Specific background colors */
+.float-call {
+    background-color: #0b8457;
+}
+.float-whatsapp {
+    background-color: #25d366;
+}
+
+/* Optional hover color changes */
+.float-call:hover {
+    background-color: #007bff;
+}
+.float-whatsapp:hover {
+    background-color: #007bff;
+}
+
+/* smooth fade-out for the icon */
+.btn-floating i {
+    transition: opacity 0.3s ease;   /* add a transition so it’s not abrupt */
+}
+
+/* hide icon when the button is hovered (or focused via keyboard) */
+.btn-floating:hover i,
+.btn-floating:focus i {
+    opacity: 0;                       /* or use `display:none;` if you prefer an instant hide */
+}
+
+.btn-floating .label {
+    white-space: nowrap;
+    opacity: 0;
+    color: #ffffff;
+    transform: translateX(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.btn-floating:hover .label,
+.btn-floating:focus .label {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Optional pulse halo */
+@keyframes pulse-ring {
+    0%   { transform: translate(-50%, -50%) scale(0.6); opacity: 0.7; }
+    70%  { transform: translate(-50%, -50%) scale(1); opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* Mobile tweak */
+@media screen and (max-width: 768px) {
+    .floating-buttons.top-right {
+        top: 140px;
+        right: 15px;
+    }
+}
+
+
+.treatment-wrapper {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.treatment-wrapper .main-treatment h1 {
+    font-size: 32px;
+    color: #569700;
+}
+
+.treatment-wrapper .sidebar-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.treatment-wrapper .sidebar-box h5 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #569700;
+}
+
+.treatment-wrapper .sidebar-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.treatment-wrapper .sidebar-box ul li {
+    padding: 6px 0;
+}
+
+.treatment-wrapper .sidebar-box ul li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.treatment-wrapper .sidebar-box ul li.active a,
+.treatment-wrapper .sidebar-box ul li a:hover {
+    color: #569700;
+    font-weight: 600;
 }

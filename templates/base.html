@@ -17,6 +17,19 @@
         gtag('config', 'G-356BJBZ023');
     </script>
 
+    <!-- 🟩 Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="{% block og_title %}Sarvanga Ayurveda{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Rediscover wellness through Ayurveda treatments in Trivandrum.{% endblock %}">
+    <meta property="og:image" content="{{ url_for('static', filename='imgs/og-banner.jpg', _external=True) }}">
+    <meta property="og:url" content="{{ request.url }}">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card (Optional) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% block twitter_title %}Sarvanga Ayurveda{% endblock %}">
+    <meta name="twitter:description" content="{% block twitter_description %}Authentic Kerala Ayurvedic care in Trivandrum.{% endblock %}">
+    <meta name="twitter:image" content="{{ url_for('static', filename='imgs/og-banner.jpg', _external=True) }}">
+
     <!-- Styles -->
      
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -51,16 +64,22 @@
 
     <a href="{{ url_for('home') }}" class="scroll-to-top"><i class="fa fa-angle-up"></i></a>
     
-    <!-- Floating Call and WhatsApp Buttons -->
-    <div class="floating-buttons top-right">
-        <a href="tel:+919633767569" class="float-call" title="Call Us" target="_blank">
-            <i class="fas fa-phone-alt"></i>
-        </a>
-        <a href="https://wa.me/919633767569" class="float-whatsapp" title="WhatsApp Us" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-    </div>
+<!-- Floating Call & WhatsApp buttons -->
+<div class="floating-buttons top-right">
+    <a href="tel:+919633767569"
+       class="btn-floating float-call"
+       aria-label="Call Sarvanga Ayurveda">
+        <i class="fas fa-phone-alt"></i>
+        <span class="label">Call&nbsp;Sarvanga</span>
+    </a>
 
+    <a href="https://wa.me/919633767569"
+       class="btn-floating float-whatsapp"
+       aria-label="WhatsApp Sarvanga Ayurveda">
+        <i class="fab fa-whatsapp"></i>
+        <span class="label">WhatsApp&nbsp;Us</span>
+    </a>
+</div>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

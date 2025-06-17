@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-from consts import treatmentlists, reasons, testimonials
+from consts import treatmentlists, reasons, testimonials, treatment_data
 app = Flask(__name__)
 
 @app.route("/")
@@ -8,7 +8,7 @@ app = Flask(__name__)
 def home():
     return render_template("index.html", treatments=treatmentlists,
                             reasons=reasons, testimonials=testimonials)
-      
+       
 @app.route("/about")
 def about():
     return render_template("about.html")
@@ -19,28 +19,33 @@ def services():
 
 @app.route('/treatments/<name>')
 def treatment_detail(name):
-    return render_template(f'treatments/{name}.html')
+    treatment = treatment_data.get(name)
+    if not treatment:
+        return render_template('404.html'), 404
+
+    return render_template('treatment_detail.html', treatment=treatment, all_treatments=treatment_data)
+ 
      
 @app.route('/treatments')
 def treatments():
-    return render_template('treatments.html')
-  
+    return render_template('treatments.html', treatments=treatmentlists)
+        
 @app.route('/packages')
 def packages():
     return render_template('packages.html')
-
+       
 @app.route('/courses')
 def courses():
     return render_template('courses.html')
-
+           
 @app.route('/blogs')
 def blogs():
     return render_template('blogs.html')
-
+    
 @app.route('/review')
 def review():
     return render_template('review.html')
-
+ 
 @app.route("/gallery")
 def gallery():
     return render_template("gallery.html")
@@ -65,4 +70,4 @@ if __name__ == "__main__":
  
    
       
-    
+     
