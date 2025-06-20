@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Ayurveda Center</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        .contact-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 20px;
+        }
+        
+        h1 {
+            color: #2a5c3c;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+        }
+        
+        h2 {
+            color: #2a5c3c;
+            font-size: 1.5em;
+            margin-top: 25px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 8px;
+        }
+        
+        .contact-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .contact-card {
+            flex: 1;
+            min-width: 250px;
+            background-color: #f5f9f6;
+            border-radius: 6px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-card h3 {
+            color: #2a5c3c;
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+        
+        .contact-icon {
+            font-size: 24px;
+            color: #3a7d4c;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        .contact-info {
+            margin-bottom: 15px;
+        }
+        
+        .contact-info a {
+            color: #2a5c3c;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-info a:hover {
+            color: #3a7d4c;
+            text-decoration: underline;
+        }
+        
+        .map-container {
+            margin-top: 30px;
+            height: 400px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .opening-hours {
+            margin-top: 30px;
+        }
+        
+        .opening-hours table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .opening-hours th, 
+        .opening-hours td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .opening-hours th {
+            background-color: #f5f9f6;
+            color: #2a5c3c;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-methods {
+                flex-direction: column;
+            }
+            
+            .contact-card {
+                width: 100%;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        
+        <p>We'd love to hear from you! Reach out to us through any of the following methods for consultations, appointments, or inquiries about our Ayurvedic treatments.</p>
+        
+        <div class="contact-methods">
+            <div class="contact-card">
+                <h3><span class="contact-icon">📞</span> Phone</h3>
+                <div class="contact-info">
+                    <strong>Phone:</strong> <a href="tel:+911234567890">+91 12345 67890</a>
+                </div>
+                <div class="contact-info">
+                    <strong>WhatsApp:</strong> <a href="https://wa.me/911234567890">+91 12345 67890</a>
+                </div>
+            </div>
+            
+            <div class="contact-card">
+                <h3><span class="contact-icon">✉️</span> Email</h3>
+                <div class="contact-info">
+                    <strong>Email:</strong> <a href="mailto:info@ayurvedacenter.com">info@ayurvedacenter.com</a>
+                </div>
+                <div class="contact-info">
+                    <strong>Consultations:</strong> <a href="mailto:consult@ayurvedacenter.com">consult@ayurvedacenter.com</a>
+                </div>
+            </div>
+            
+            <div class="contact-card">
+                <h3><span class="contact-icon">🏠</span> Address</h3>
+                <div class="contact-info">
+                    <strong>Main Center:</strong><br>
+                    Ayurveda Center Name,<br>
+                    Near Landmark, Main Road,<br>
+                    City - 123456,<br>
+                    Kerala, India
+                </div>
+            </div>
+        </div>
+        
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31435.20609896812!2d76.2138824!3d10.0278624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c26d099a5ad%3A0x84b6b3a1083f321a!2sKottakkal%2C%20Kerala!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        
+        <div class="opening-hours">
+            <h2>Opening Hours</h2>
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th>Timing</th>
+                </tr>
+                <tr>
+                    <td>Monday - Saturday</td>
+                    <td>8:00 AM - 8:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td>9:00 AM - 2:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Emergency</td>
+                    <td>24/7 Available</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
