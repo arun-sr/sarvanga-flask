@@ -3171,6 +3171,7 @@ img.lazy-image.loaded {
   right: 0;
   bottom: 0;
   /* background-image: url('{{ url_for('static', filename='imgs/menu-top-shadow.png') }}'); */
+  background-image: url(../imgs/menu-top-shadow.png);
 
   background-repeat: no-repeat;
   background-position: top center;
