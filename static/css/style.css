@@ -3170,7 +3170,8 @@ img.lazy-image.loaded {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(../images/update-1-12-2020/shapes/menu-top-shadow.png);
+  /* background-image: url('{{ url_for('static', filename='imgs/menu-top-shadow.png') }}'); */
+
   background-repeat: no-repeat;
   background-position: top center;
   z-index: 10;
