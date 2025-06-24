@@ -382,3 +382,69 @@ testimonials = [
         "text": "I had a wonderful experience at the center. The staff was courteous, well-trained, and incredibly helpful. The cleanliness of the place added to the positive atmosphere. The whole-body massage was exceptionally relaxing, making it a rejuvenating session overall."
     }
 ]
+ 
+wellness_packages = {
+    "spinecare": {
+        "icon": "🧘‍♂️",
+        "title": "Spinecare Package",
+        "desc": "Targeted therapies for back pain, spondylosis, and spine stiffness using kizhi and abhyanga."
+    },
+    "weight_reduction": {
+        "icon": "⚖️",
+        "title": "Weight Reduction Package",
+        "desc": "Natural weight loss with udwarthanam, virechana, and fat-burning herbal preparations."
+    },
+    "anti_ageing": {
+        "icon": "🌸",
+        "title": "Anti-Ageing Package",
+        "desc": "Rejuvenate your skin and body with Rasayana chikitsa, Navarakizhi, and customized abhyanga."
+    },
+    "stress_relief": {
+        "icon": "🧠",
+        "title": "Stress Relieving Package",
+        "desc": "Calm your mind with Shirodhara, abhyanga, herbal steam, and guided wellness practices."
+    },
+    "detox": {
+        "icon": "🌿",
+        "title": "Detoxification Package",
+        "desc": "Deep cleansing through Panchakarma including Vamana, Virechana & Basti therapies."
+    },
+    "rejuvenation": {
+        "icon": "💪",
+        "title": "Rejuvenation Package",
+        "desc": "Recharge and refresh with full-body massage, kizhi, herbal baths, and internal Rasayana."
+    }
+}
+
+ayurveda_services = {
+    "consultation": {
+        "icon": "🩺",
+        "title": "Ayurvedic Consultation",
+        "desc": "Get personalized health advice from experienced Ayurveda doctors based on your prakriti and symptoms."
+    },
+    "bone_setting": {
+        "icon": "🦴",
+        "title": "Bone & Joint Care",
+        "desc": "Traditional bone setting and alignment techniques for sprains, dislocations, and musculoskeletal injuries."
+    },
+    "postnatal_care": {
+        "icon": "🤱",
+        "title": "Postnatal Care",
+        "desc": "Holistic support for mothers with herbal massages, special diets, and herbal therapies for faster recovery."
+    },
+    "beauty_care": {
+        "icon": "💆‍♀️",
+        "title": "Ayurvedic Beauty Care",
+        "desc": "Ayurvedic Facials, scrubs, and hair treatments using herbal packs and oils to enhance natural glow and beauty."
+    },
+    "lifestyle_diet": {
+        "icon": "🥗",
+        "title": "Diet & Lifestyle Guidance",
+        "desc": "Customized food and daily routine recommendations according to dosha imbalances and conditions."
+    },
+    "corporate": {
+        "icon": "🏢",
+        "title": "Corporate Wellness",
+        "desc": "Stress-relief programs and preventive care designed for working professionals and busy lifestyles."
+    }
+}

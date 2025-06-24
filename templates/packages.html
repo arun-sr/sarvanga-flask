@@ -1,31 +1,60 @@
 {% extends "base.html" %}
-{% block title %}Best Panchakarma Treatment Center in Trivandrum | Sarvanga{% endblock %}
+{% block title %}Ayurveda Wellness Packages | Sarvanga{% endblock %}
 
 {% block content %}
 
-
-
-
-<section class="coming-soon-section" style="background-color: #f4fce8; padding: 100px 0; text-align: center;">
-    <br>
-    <br>
-
-    <div class="auto-container">
-        <img src="{{ url_for('static', filename='imgs/logo.png') }}" alt="Sarvanga Logo" style="max-width: 120px; margin-bottom: 30px;">
-        <h1 style="font-size: 3em; color: #569700; margin-bottom: 10px;">Coming Soon</h1>
-        <p style="font-size: 1.2em; color: #444;">We're crafting something wonderful for your wellness journey. Stay tuned!</p>
-        <div style="margin-top: 30px;">
-            <div style="width: 40px; height: 40px; border: 4px solid rgba(86, 151, 0, 0.2); border-top-color: #569700; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto;"></div>
+<!-- Page Banner -->
+<section class="page-banner">
+    <div class="image-layer" style="background-image:url('{{ url_for('static', filename='imgs/breadcrumbs.jpg') }}');"></div>
+    <div class="banner-inner">
+        <div class="auto-container">
+            <div class="inner-container clearfix">
+                <div class="page-nav">
+                    <h1 class="text-white">Ayurveda Wellness Packages</h1>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<style>
-@keyframes spin {
-    to { transform: rotate(360deg); }
-}
-</style>
+<!-- Package Section -->
+<section class="pt-5 pb-5" style="background-color: #f7fcf3;">
+    <div class="auto-container">
+        <div class="sec-title text-center mb-5">
+            <h2 class="fw-bold">✨ Our Signature Packages</h2>
+            <p class="text-muted">Holistic treatments designed for your mind, body, and spirit.</p>
+        </div>
+        <div class="row g-4">
+            {% for key, pkg in packages.items() %}
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 text-center p-4 rounded-4 feature-tile">
+                        <div class="icon-circle mx-auto mb-3">
+                            <span class="fs-2">{{ pkg.icon }}</span>
+                        </div>
+                        <h6 class="fw-semibold mb-2 text-success">{{ pkg.title }}</h6>
+                        <p class="text-muted small">{{ pkg.desc }}</p>
+                        <!-- <a href="{{ url_for('contact') }}" class="theme-btn btn-style-one mt-3"><span class="btn-title">Know More</span></a> -->
+                        <a class="theme-btn btn-style-one" href="{{ url_for('contact') }}">
+                            <i class="btn-curve"></i>
+                            <span class="btn-title">Discover More</span>
+                        </a>
+                        <!-- <a href="{{ url_for('contact') }}" class="btn btn-outline-success btn-sm mt-3">Know More</a> -->
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
 
-
+<!-- Call To Action -->
+<section class="call-to-action-section pt-5 pb-5" style="background-color: #eafbe3;">
+    <div class="auto-container text-center">
+        <h3 class="mb-3 text-success">🌿 Begin Your Healing Journey with Sarvanga</h3>
+        <p class="mb-4">Get a customized package suited for your lifestyle and health needs.</p>
+        <a href="{{ url_for('contact') }}" class="theme-btn btn-style-one">
+            <span class="btn-title">Book Your Consultation Now</span>
+        </a>
+    </div>
+</section>
 
 {% endblock %}

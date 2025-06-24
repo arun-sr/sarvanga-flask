@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-from consts import reasons, testimonials, treatments_catalog
+from consts import reasons, testimonials, treatments_catalog, wellness_packages, ayurveda_services
 app = Flask(__name__)
 
 
@@ -18,9 +18,9 @@ def home():
 def about():
     return render_template("about.html")
 
-@app.route("/services")
+@app.route('/services')
 def services():
-    return render_template("services.html")
+    return render_template('services.html', services=ayurveda_services) 
 
 @app.route('/treatments/<name>')
 def treatments_details(name):
@@ -40,8 +40,8 @@ def treatments():
 
 @app.route('/packages')
 def packages():
-    return render_template('packages.html')
-       
+    return render_template('packages.html', packages=wellness_packages)
+
 @app.route('/courses')
 def courses():
     return render_template('courses.html')
