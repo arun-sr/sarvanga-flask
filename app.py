@@ -71,6 +71,13 @@ def contact():
 @app.route("/thank-you")
 def thank_you():
     return render_template("thank_you.html")
+from flask import Flask, redirect, request
+
+@app.before_request
+def redirect_non_www():
+    host = request.headers.get("Host", "")
+    if host == "sarvanga.co.in":
+        return redirect("https://www.sarvanga.co.in" + request.full_path, code=301)
 
 if __name__ == "__main__":
     app.run(debug=True)
