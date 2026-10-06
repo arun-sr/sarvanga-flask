@@ -34,10 +34,12 @@ def relative_url(page_path: str, target: str) -> str:
 
 def rewrite_urls(html: str, page_path: str) -> str:
     """Turn Flask's root-relative URLs into GitHub Pages-compatible URLs."""
+
     static_url = relative_url(page_path, "static/")
+    static_url = static_url.rstrip("/") + "/"
+
     html = html.replace('"/static/', f'"{static_url}').replace(
-        "'/static/", f"'{static_url}"
-    )
+    "'/static/", f"'{static_url}")
 
     urls = {}
     for route, output_path in PAGES.items():
